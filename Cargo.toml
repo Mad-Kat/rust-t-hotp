@@ -1,0 +1,11 @@
+[package]
+name = "t-hotp"
+version = "0.1.0"
+authors = ["Luca"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+data-encoding = "2.1.2"
+hmac-sha1 = "0.1.3"
