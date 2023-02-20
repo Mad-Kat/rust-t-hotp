@@ -2,6 +2,9 @@ use data_encoding::BASE32_NOPAD;
 use hmacsha1::hmac_sha1;
 use std::time::SystemTime;
 
+#[cfg(feature = "wasm")]
+pub mod wasm;
+
 pub fn create_totp(key: &str) -> Result<u32, OtpError> {
     let now = SystemTime::now();
     let time_since_epoch = now.duration_since(SystemTime::UNIX_EPOCH)?;
